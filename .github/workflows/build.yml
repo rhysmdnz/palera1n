@@ -43,18 +43,18 @@ jobs:
         id: branch-name
         uses: tj-actions/branch-names@v7
 
-      - name: Upload artifact
-        if: ${{ github.event_name != 'pull_request' }}
-        uses: wangyucode/sftp-upload-action@v1.4.8
-        with:
-          host: ${{ secrets.NICKCHAN_FTP_HOST }}
-          port: ${{ secrets.NICKCHAN_FTP_PORT }}
-          username: palera1n
-          password: ${{ secrets.NICKCHAN_FTP_PASS }}
-          forceUpload: true
-          dryRun: false
-          localDir: 'ready/'
-          remoteDir: "/palera1n/artifacts/c-rewrite/${{ steps.branch-name.outputs.ref_branch || github.ref_name }}/${{ github.run_number }}"
+      # - name: Upload artifact
+      #   if: ${{ github.event_name != 'pull_request' }}
+      #   uses: wangyucode/sftp-upload-action@v1.4.8
+      #   with:
+      #     host: ${{ secrets.NICKCHAN_FTP_HOST }}
+      #     port: ${{ secrets.NICKCHAN_FTP_PORT }}
+      #     username: palera1n
+      #     password: ${{ secrets.NICKCHAN_FTP_PASS }}
+      #     forceUpload: true
+      #     dryRun: false
+      #     localDir: 'ready/'
+      #     remoteDir: "/palera1n/artifacts/c-rewrite/${{ steps.branch-name.outputs.ref_branch || github.ref_name }}/${{ github.run_number }}"
 
   build-darwin:
     strategy:
@@ -334,18 +334,18 @@ jobs:
         id: branch-name
         uses: tj-actions/branch-names@v7
 
-      - name: Upload artifact
-        if: ${{ github.event_name != 'pull_request' }}
-        uses: wangyucode/sftp-upload-action@v1.4.8
-        with:
-          host: ${{ secrets.NICKCHAN_FTP_HOST }}
-          port: ${{ secrets.NICKCHAN_FTP_PORT }}
-          username: palera1n
-          password: ${{ secrets.NICKCHAN_FTP_PASS }}
-          forceUpload: true
-          dryRun: false
-          localDir: 'ready/'
-          remoteDir: "/palera1n/artifacts/c-rewrite/${{ steps.branch-name.outputs.ref_branch || github.ref_name }}/${{ github.run_number }}"
+      # - name: Upload artifact
+      #   if: ${{ github.event_name != 'pull_request' }}
+      #   uses: wangyucode/sftp-upload-action@v1.4.8
+      #   with:
+      #     host: ${{ secrets.NICKCHAN_FTP_HOST }}
+      #     port: ${{ secrets.NICKCHAN_FTP_PORT }}
+      #     username: palera1n
+      #     password: ${{ secrets.NICKCHAN_FTP_PASS }}
+      #     forceUpload: true
+      #     dryRun: false
+      #     localDir: 'ready/'
+      #     remoteDir: "/palera1n/artifacts/c-rewrite/${{ steps.branch-name.outputs.ref_branch || github.ref_name }}/${{ github.run_number }}"
 
       - name: Upload ${{ matrix.os }} thin ${{ matrix.arch }} build
         if: ${{ github.event_name != 'pull_request' }}
@@ -506,18 +506,18 @@ jobs:
         id: branch-name
         uses: tj-actions/branch-names@v7
 
-      - name: Upload artifact
-        if: ${{ github.event_name != 'pull_request' }}
-        uses: wangyucode/sftp-upload-action@v1.4.8
-        with:
-          host: ${{ secrets.NICKCHAN_FTP_HOST }}
-          port: ${{ secrets.NICKCHAN_FTP_PORT }}
-          username: palera1n
-          password: ${{ secrets.NICKCHAN_FTP_PASS }}
-          forceUpload: true
-          dryRun: false
-          localDir: 'ready/'
-          remoteDir: "/palera1n/artifacts/c-rewrite/${{ steps.branch-name.outputs.ref_branch || github.ref_name }}/${{ github.run_number }}"
+      # - name: Upload artifact
+      #   if: ${{ github.event_name != 'pull_request' }}
+      #   uses: wangyucode/sftp-upload-action@v1.4.8
+      #   with:
+      #     host: ${{ secrets.NICKCHAN_FTP_HOST }}
+      #     port: ${{ secrets.NICKCHAN_FTP_PORT }}
+      #     username: palera1n
+      #     password: ${{ secrets.NICKCHAN_FTP_PASS }}
+      #     forceUpload: true
+      #     dryRun: false
+      #     localDir: 'ready/'
+      #     remoteDir: "/palera1n/artifacts/c-rewrite/${{ steps.branch-name.outputs.ref_branch || github.ref_name }}/${{ github.run_number }}"
 
   build-Linux:
     strategy:
@@ -846,31 +846,31 @@ jobs:
         id: branch-name
         uses: tj-actions/branch-names@v7
 
-      - name: Upload artifact
-        if: ${{ github.event_name != 'pull_request' }}
-        uses: wangyucode/sftp-upload-action@v1.4.8
-        with:
-          host: ${{ secrets.NICKCHAN_FTP_HOST }}
-          port: ${{ secrets.NICKCHAN_FTP_PORT }}
-          username: palera1n
-          password: ${{ secrets.NICKCHAN_FTP_PASS }}
-          forceUpload: true
-          dryRun: false
-          localDir: 'ready/'
-          remoteDir: "/palera1n/artifacts/c-rewrite/${{ steps.branch-name.outputs.ref_branch || github.ref_name }}/${{ github.run_number }}"
+      # - name: Upload artifact
+      #   if: ${{ github.event_name != 'pull_request' }}
+      #   uses: wangyucode/sftp-upload-action@v1.4.8
+      #   with:
+      #     host: ${{ secrets.NICKCHAN_FTP_HOST }}
+      #     port: ${{ secrets.NICKCHAN_FTP_PORT }}
+      #     username: palera1n
+      #     password: ${{ secrets.NICKCHAN_FTP_PASS }}
+      #     forceUpload: true
+      #     dryRun: false
+      #     localDir: 'ready/'
+      #     remoteDir: "/palera1n/artifacts/c-rewrite/${{ steps.branch-name.outputs.ref_branch || github.ref_name }}/${{ github.run_number }}"
 
-      - name: Upload usbmuxd artifact
-        if: ${{ github.event_name != 'pull_request' }}
-        uses: wangyucode/sftp-upload-action@v1.4.8
-        with:
-          host: ${{ secrets.NICKCHAN_FTP_HOST }}
-          port: ${{ secrets.NICKCHAN_FTP_PORT }}
-          username: palera1n
-          password: ${{ secrets.NICKCHAN_FTP_PASS }}
-          forceUpload: true
-          dryRun: false
-          localDir: 'usbmuxd-static/'
-          remoteDir: "/palera1n/artifacts/usbmuxd-static"
+      # - name: Upload usbmuxd artifact
+      #   if: ${{ github.event_name != 'pull_request' }}
+      #   uses: wangyucode/sftp-upload-action@v1.4.8
+      #   with:
+      #     host: ${{ secrets.NICKCHAN_FTP_HOST }}
+      #     port: ${{ secrets.NICKCHAN_FTP_PORT }}
+      #     username: palera1n
+      #     password: ${{ secrets.NICKCHAN_FTP_PASS }}
+      #     forceUpload: true
+      #     dryRun: false
+      #     localDir: 'usbmuxd-static/'
+      #     remoteDir: "/palera1n/artifacts/usbmuxd-static"
 
       - name: Generate cached sysroot archive
         if: steps.sysroot_cache.outputs.cache-hit != 'true'
